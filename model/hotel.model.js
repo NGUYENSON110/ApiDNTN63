@@ -21,8 +21,7 @@ const model_hotel = new mongoose.Schema({
     },
     disscount:{
         type: Number,
-        required: true,
-
+        
     }
 })
 

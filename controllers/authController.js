@@ -63,6 +63,19 @@ const authController = {
       res.status(500).json(error);
     }
   },
+
+  // REFRESH TOKEN 
+  // requestRefreshToken :  async (req, res) =>{
+  //     // Take  refresh token from user
+
+  // }
+
+
+
+  // LOG OUT
+  userLogout : async(req,res) =>{
+      
+  }
 };
 
 module.exports = authController;

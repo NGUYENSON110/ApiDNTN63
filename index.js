@@ -32,7 +32,8 @@ mongoose.connect(
 
 app.use(bodyParser.json({limit:"50mb"}));
 app.use(cors());
-app.use(morgan("common"))
+app.use(morgan("common"));
+app.use(express.json());
 // 
 app.get('/',(req,res) =>{
     res.send("hello")
