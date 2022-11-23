@@ -8,13 +8,10 @@ const model_address = new mongoose.Schema({
     imageurl:{
         type:String
     },
-    hotels:
-            [
-    {
-        type: mongoose.Schema.Types.ObjectId,
-        ref:"Hotel"
+    hotels: {
+        type: String,  
     }
-            ]
+          
 })
 
 

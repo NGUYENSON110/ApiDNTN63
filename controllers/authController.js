@@ -29,14 +29,14 @@ const authController = {
     try {
       const user = await authen.findOne({ username: req.body.username });
       if (!user) {
-        res.status(404).json("Wrong username!");
+        res.status(400).json("Wrong username!");
       }
       const validPassword = await bcrypt.compare(
         req.body.password,
         user.password
       );
       if (!validPassword) {
-        res.status(404).json("wrong password");
+        res.status(400).json("wrong password");
       }
       if (user && validPassword) {
       const token  =  jwt.sign(

@@ -1,6 +1,6 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
-const model_hotel = new mongoose.Schema({
+const model_recommned_hotel = new mongoose.Schema({
     name : {
         type:String,
         required: true
@@ -18,11 +18,11 @@ const model_hotel = new mongoose.Schema({
         type:Number,
         required:true,
     },
-    disscount:{
+    bed:{
         type: Number,
-        
-    }
+        required:true,
+    }    
 })
 
-let Hotel = mongoose.model("Hotel", model_hotel);
-module.exports = Hotel;
+let recommnedHotel = mongoose.model("recommendHotel", model_recommned_hotel);
+module.exports = recommnedHotel;
