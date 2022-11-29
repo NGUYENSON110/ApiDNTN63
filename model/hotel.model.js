@@ -18,9 +18,17 @@ const model_hotel = new mongoose.Schema({
         type:Number,
         required:true,
     },
-    disscount:{
-        type: Number,
-        
+    description:{
+        type: String,
+        required: true,
+    },
+    phone:{
+        type:Number,
+        required: true,
+    },
+    type:{
+        type:String,
+        required:true,
     }
 })
 

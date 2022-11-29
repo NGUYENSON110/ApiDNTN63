@@ -8,19 +8,20 @@ const authController = {
       // HASHED PASSWORD
       const salt = await bcrypt.genSalt(10);
       const hashed = await bcrypt.hash(req.body.password, salt);
-
+     
       // NEW USER
       const newUser = await new authen({
         username: req.body.username,
         email: req.body.email,
         password: hashed,
       });
-
+      
       // SAVE TO DATABASE
-      newUser.save();
-      res.status(200).json("Welcome");
+      const user = await newUser.save();
+     
+      res.status(200).json(user);
     } catch (error) {
-      res.status(500).json(error);
+      res.status(400).json(error);
     }
   },
 
