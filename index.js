@@ -10,6 +10,7 @@ const voucherRoute = require("./routes/voucherRoutes");
 const authRoute = require("./routes/authRouters");
 const userRoute = require("./routes/userRoutes");
 const recommendHotel = require("./routes/rmmRoutes");
+const expRoute = require("./routes/expRoutes");
 
 
 dotenv.config();
@@ -48,6 +49,7 @@ app.use("/v1/voucher",voucherRoute);
 app.use("/v1/auth", authRoute);
 app.use("/v1/user", userRoute);
 app.use("/v1/recommendHotel", recommendHotel);
+app.use("/v1/exp", expRoute);
 
 
 
