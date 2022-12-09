@@ -26,10 +26,7 @@ const model_hotel = new mongoose.Schema({
         type:Number,
         required: true,
     },
-    type:{
-        type:String,
-        // required:true,
-    }
+    
 })
 
 let Hotel = mongoose.model("Hotel", model_hotel);
