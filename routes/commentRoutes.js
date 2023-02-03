@@ -9,6 +9,9 @@ router.post("/", commentController.addComment);
 router.get('/', commentController.getallComment);
 
 // Update commnet 
+router.get('/:id', commentController.getanComment);
+
+// Update commnet 
 router.put('/:id', commentController.updateComment);
 
 module.exports = router;

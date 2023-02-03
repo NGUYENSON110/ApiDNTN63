@@ -13,13 +13,25 @@ const commentController = {
         }
     },
 
-  
+
 
     //  GET ALL COMMENT
     getallComment: async (req, res) => {
         try {
-            const allComment = await Comment.find({hotelId : req.params.id});
+            const allComment = await Comment.find();
             res.status(200).json(allComment);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    },
+
+    //    GET AN HOTEL
+    getanComment: async (req, res) => {
+        try {
+            var query = {hotelId: req.params.id}
+            console.log("req.params", req.params.id)
+            const anComment = await Comment.find(query)
+            res.status(200).json(anComment);
         } catch (error) {
             res.status(500).json(error);
         }
