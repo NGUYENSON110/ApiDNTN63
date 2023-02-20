@@ -47,8 +47,17 @@ const commentController = {
         } catch (error) {
             res.status(500).json(error);
         }
-    }
+    },
 
+    // DELETE COMMENT
+    deleteComment: async(req,res) =>{
+        try {
+          await Comment.findByIdAndDelete(req.params.id);
+          res.status(200).json("delete successfully");
+        } catch (error) {
+          res.status(500).json(error);
+        }
+      }
 }
 
 module.exports = commentController;

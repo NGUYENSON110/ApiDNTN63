@@ -47,6 +47,16 @@ const hotelController = {
     } catch (error) {
       res.status(500).json(error);
     }
+  },
+
+  // DELETE HOTEL
+  deleteHotel: async(req,res) =>{
+    try {
+      await Hotel.findByIdAndDelete(req.params.id);
+      res.status(200).json("delete successfully");
+    } catch (error) {
+      res.status(500).json(error);
+    }
   }
 };
 

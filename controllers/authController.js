@@ -13,6 +13,7 @@ const authController = {
       const newUser = await new authen({
         username: req.body.username,
         email: req.body.email,
+        phone : req.body.phone,
         password: hashed,
         admin: req.body.admin
       });

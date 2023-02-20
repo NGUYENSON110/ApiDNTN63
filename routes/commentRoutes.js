@@ -13,5 +13,7 @@ router.get('/:id', commentController.getanComment);
 
 // Update commnet 
 router.put('/:id', commentController.updateComment);
+// DELETE comment
+router.delete('/:id', commentController.deleteComment);
 
 module.exports = router;

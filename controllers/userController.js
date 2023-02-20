@@ -12,6 +12,15 @@ const userController = {
         }
     },
 
+    // GET AN USERS
+    getAnUser : async (req,res) =>{
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
+
    
 }
 module.exports = userController

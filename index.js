@@ -11,7 +11,8 @@ const authRoute = require("./routes/authRouters");
 const userRoute = require("./routes/userRoutes");
 const recommendHotel = require("./routes/rmmRoutes");
 const expRoute = require("./routes/expRoutes");
-const cmtRoute = require("./routes/commentRoutes")
+const cmtRoute = require("./routes/commentRoutes");
+const bookingRoute = require('./routes/bookingRoutes');
 
 dotenv.config();
 const app = express();
@@ -51,8 +52,7 @@ app.use("/v1/user", userRoute);
 app.use("/v1/recommendHotel", recommendHotel);
 app.use("/v1/exp", expRoute);
 app.use("/v1/comment", cmtRoute);
-
-
+app.use("/v1/booking", bookingRoute);
 
 
 
