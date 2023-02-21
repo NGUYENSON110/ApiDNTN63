@@ -16,11 +16,11 @@ const model_user = new mongoose.Schema({
         maxlength: 50,
         unique: true
     },
-    phone: {
+    phone : {
         type: Number,
         required: true,
-
     },
+
     password: {
         type: String,
         required: true,

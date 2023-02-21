@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 
 const model_booking = new mongoose.Schema({
-    hotelId:{
-        type: String,
-        required : true,
-    },
+    hotelId:{ type: mongoose.Schema.Types.ObjectId, ref: "hotels" },
     phoneuserName : {
         type:String,
         required: true,
@@ -23,6 +20,10 @@ const model_booking = new mongoose.Schema({
     },
     price:{
         type: String, 
+        required: true,
+    },
+    room: {
+        type: Number,
         required: true,
     }
 })

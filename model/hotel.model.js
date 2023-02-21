@@ -18,6 +18,10 @@ const model_hotel = new mongoose.Schema({
         type:Number,
         required:true,
     },
+    room:{
+        type:Number,
+        require:true,
+    },
     description:{
         type: String,
         required: true,
