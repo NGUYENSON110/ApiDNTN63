@@ -25,6 +25,10 @@ const model_booking = new mongoose.Schema({
     room: {
         type: Number,
         required: true,
+    },
+    mdh:{
+        type:String,
+        required: true,
     }
 })
 
